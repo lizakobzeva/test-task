@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "email": "lizakobzeva@list.ru",
+      "username": "Лиза Кобзева",
+      "password": "$2a$10$d.YTO034MoWhUXbiEY3cpuXVuVTdgvI91A2dBz2rcfWyqvUe6pOWG",
+      "id": 1
+    },
+    {
+      "username": "Exemple Exemple",
+      "email": "example@list.ru",
+      "password": "$2a$10$eFNRmSNMDqhbO8r6rtwPROTlVEYnYLpJnB9F9tqpYLpmLr47pGESe",
+      "id": 2
+    },
+    {
+      "username": "Привет Приветов",
+      "email": "hello@list.ru",
+      "password": "$2a$10$omgM6Z/SKZ9VoKfyeJdxNu5CX4YCcUkTJDFnu7o7SogYsX0vYGSY.",
+      "id": 3
+    },
+    {
+      "username": "Кот Котов",
+      "email": "cat@list.ru",
+      "password": "$2a$10$Z8Hknj6cBU5oUZR/nNYY6uH/HaXwK.lq.egHaojLdNZX7i.U2YiE.",
+      "id": 4
+    },
+    {
+      "username": "Ктото Ктотов",
+      "email": "who@mail.ru",
+      "password": "$2a$10$NcOdVbMw.zBiagG0HJ21COTLGzi/2hJ6DmRvprRUCTkULxN/zfR8y",
+      "id": 5
+    }
+  ]
+}
