@@ -9,8 +9,8 @@ import {
 } from "antd";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
-import { loginFetch } from "../services/AuthByEmail/AuthByEmail";
-import useUserData from "../slices/UserSlice";
+import useUserData from "@/slices/UserSlice";
+import { loginFetch } from "@/services/AuthByEmail/AuthByEmail";
 
 type FieldType = {
   email: string;
@@ -34,7 +34,6 @@ const LoginForm = () => {
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     await loginFetch(values.email, values.password).then((data) => {
       if (data) {
-        console.log(data);
         setUserData(data.username, data.email);
         navigate("/main");
       } else {
@@ -55,13 +54,13 @@ const LoginForm = () => {
         <Form.Item>Войти</Form.Item>
         <Form.Item
           name="email"
-          rules={[{ required: true, message: "Please input your Email!" }]}
+          rules={[{ required: true, message: "Введите email!" }]}
         >
           <Input prefix={<UserOutlined />} placeholder="Email" type="email" />
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[{ required: true, message: "Please input your Password!" }]}
+          rules={[{ required: true, message: "Введите пароль!" }]}
         >
           <Input.Password
             prefix={<LockOutlined />}
@@ -72,15 +71,15 @@ const LoginForm = () => {
         <Form.Item>
           <Flex justify="space-between" align="center">
             <Form.Item name="remember" valuePropName="checked" noStyle>
-              <Checkbox>Remember me</Checkbox>
+              <Checkbox>Запомнить меня</Checkbox>
             </Form.Item>
-            <Link to="/forget">Forgot password?</Link>
+            <Link to="/forget">Забыли пароль?</Link>
           </Flex>
         </Form.Item>
 
         <Form.Item>
           <Button block type="primary" htmlType="submit">
-            Log in
+            Войти
           </Button>
         </Form.Item>
       </Form>

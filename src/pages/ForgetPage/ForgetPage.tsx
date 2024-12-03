@@ -1,5 +1,5 @@
+import ForgetForm from "@/components/ForgetForm";
 import { Flex } from "antd";
-import ForgetForm from "../../components/ForgetForm";
 
 const ForgetPage = () => {
   return (

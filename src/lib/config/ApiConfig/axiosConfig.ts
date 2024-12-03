@@ -1,5 +1,5 @@
+import { urls } from "@/lib/constants/urls";
 import axios from "axios";
-import { urls } from "../../constants/urls";
 
 const axiosInstance = axios.create({
   baseURL: urls.api,
@@ -17,8 +17,7 @@ axiosInstance.interceptors.request.use(
   (error) => {
     if (error.response.status === 401) {
       localStorage.clear();
-      axiosInstance.get("/refresh_token");
-      //login(email, password)
+      //TODO axiosInstance.get("/refresh_token");
     }
     return error;
   }

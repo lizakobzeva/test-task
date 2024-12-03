@@ -19,7 +19,7 @@ export const OnlyAuth = ({ component, onlyAuth = true }: IProtected) => {
   }
 
   if (onlyAuth && !token) {
-    return <Navigate to="/login" state={{ from: location }} />;
+    return <Navigate to="/" state={{ from: location }} />;
   }
 
   return component;

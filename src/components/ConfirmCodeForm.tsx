@@ -25,20 +25,20 @@ const ConfirmCodeForm = ({ openErrorNotification }: Props) => {
     >
       <Form.Item>
         <Button icon={<ArrowLeftOutlined />} onClick={() => navigate(-1)}>
-          Back
+          Назад
         </Button>
         <p>Введите код подтверждения</p>
       </Form.Item>
       <Form.Item
         name="email"
-        rules={[{ required: true, message: "Please input your Email!" }]}
+        rules={[{ required: true, message: "Введите email!" }]}
       >
         <Input.OTP />
       </Form.Item>
 
       <Form.Item>
         <Button block type="primary" htmlType="submit">
-          Reset Password
+          Сбросить пароль
         </Button>
       </Form.Item>
     </Form>

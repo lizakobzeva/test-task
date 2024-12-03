@@ -1,13 +1,13 @@
+import { logoutFetch } from "@/services/AuthByEmail/AuthByEmail";
+import useUserData from "@/slices/UserSlice";
 import { Button, Flex } from "antd";
-import { logoutFetch } from "../../services/AuthByEmail/AuthByEmail";
 import { useNavigate } from "react-router-dom";
-import useUserData from "../../slices/UserSlice";
 
 const MainPage = () => {
   const navigate = useNavigate();
   const { username } = useUserData();
   const logout = () => {
-    logoutFetch().then(() => navigate("/login"));
+    logoutFetch().then(() => navigate("/"));
   };
   return (
     <Flex
@@ -19,7 +19,7 @@ const MainPage = () => {
     >
       <h2>Добро пожаловать {username}!</h2>
       <Button type="primary" onClick={logout}>
-        Log Out
+        Выйти из акаунта
       </Button>
     </Flex>
   );

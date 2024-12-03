@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import MainPage from "../../../pages/MainPage/MainPage";
-import LoginPage from "../../../pages/LoginPage/LoginPage";
 import { OnlyAuth, OnlyUnAuth } from "./ProtectedRoute";
-import ForgetPage from "../../../pages/ForgetPage/ForgetPage";
-import CodePage from "../../../pages/CodePage/CodePage";
+import MainPage from "@/pages/MainPage/MainPage";
+import LoginPage from "@/pages/LoginPage/LoginPage";
+import ForgetPage from "@/pages/ForgetPage/ForgetPage";
+import CodePage from "@/pages/CodePage/CodePage";
 
 export interface IListRoutes {
   element: ReactNode;
@@ -20,7 +20,7 @@ const onlyAuthRoutes: IListRoutes[] = [
 const onlyUnAuthRoutes: IListRoutes[] = [
   {
     element: <LoginPage />,
-    path: "/login",
+    path: "/",
   },
   {
     element: <ForgetPage />,

@@ -1,15 +1,20 @@
-import axiosInstance from "../../lib/config/ApiConfig/axiosConfig";
+import axiosInstance from "@/lib/config/ApiConfig/axiosConfig";
+
+interface loginFetchResponse {
+  accessToken: string;
+  user: {
+    email: string;
+    id: number;
+    username: string;
+  };
+}
 
 export const loginFetch = async (email: string, password: string) => {
   try {
-    const res = await axiosInstance.post(
-      "/login",
-      {
-        email,
-        password,
-      },
-      { headers: { "Content-Type": "application/json" } }
-    );
+    const res = await axiosInstance.post<loginFetchResponse>("/login", {
+      email,
+      password,
+    });
     if (res.data.accessToken)
       localStorage.setItem("token", res.data.accessToken);
     return res.data.user;

@@ -1,6 +1,5 @@
 import { Flex, notification } from "antd";
-
-import ConfirmCodeForm from "../../components/ConfirmCodeForm";
+import ConfirmCodeForm from "@/components/ConfirmCodeForm";
 
 const CodePage = () => {
   const [api, contextHolder] = notification.useNotification();

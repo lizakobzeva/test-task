@@ -1,5 +1,5 @@
+import LoginForm from "@/components/LoginForm";
 import { Flex } from "antd";
-import LoginForm from "../../components/LoginForm";
 
 const LoginPage = () => {
   return (
